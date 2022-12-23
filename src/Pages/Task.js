@@ -15,7 +15,7 @@ function Task() {
       id: 2,
       text: 'Discover 5% Amazon End',
       day: '12/31/2022',
-      reminder: true,
+      reminder: false,
     },
   ])
 
