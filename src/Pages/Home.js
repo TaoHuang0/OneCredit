@@ -4,7 +4,7 @@ import Card from '../Components/Card'
 import CardInput from './CardInput';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 
-const Home = ( { creditCards } ) => {
+const Home = ( { creditCards, onDelete } ) => {
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
     let path = `/cardinput`; 
@@ -20,9 +20,10 @@ const Home = ( { creditCards } ) => {
       </nav>
       <div className='cards'>
         {creditCards.map((creditCard) => (
-          <Card key={creditCard.id} type={creditCard.type} approveDate={creditCard.approveDate} />
+          <Card creditCard={creditCard} type={creditCard.type} approveDate={creditCard.approveDate}  onDelete={onDelete} />
         ))}
       </div>
+      {creditCards.length === 0 ? <h2 id='emptyCard'>No Avaliable Credit Card</h2> : ''}
       <button className='btn' onClick={routeChange} > <h3> Add New Credit Card </h3> </button>
     </div>
   )

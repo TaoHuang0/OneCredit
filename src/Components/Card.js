@@ -6,7 +6,7 @@ import Doc from '../Images/docicon.png'
 import Discover from '../Images/Discover.png'
 import Boa321 from '../Images/boa321.png'
 
-const Card = ( { key, type, approveDate } ) => {
+const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
   return (
     <div className='card'>
         <div className='image'>
@@ -28,6 +28,7 @@ const Card = ( { key, type, approveDate } ) => {
             <h3> {approveDate} </h3>
             <FaTimes className='deleteCard'
             style={{ color: 'red', cursor: 'pointer', marginLeft: '2em'}}
+            onClick={ () => onDelete(creditCard.id) }
             />
         </div>
     </div>

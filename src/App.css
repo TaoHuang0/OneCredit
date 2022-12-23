@@ -166,3 +166,9 @@ nav {
   margin-top: 1em;
   font-size: 20px;
 }
+
+#emptyCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,9 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 const CardInput = ( { onAdd } ) => {
     const [creditCard, setCreditCard] = useState('')
     const [approveDate, setApproveDate] = useState('')
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = `/`; 
+        navigate(path);
+    }
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -18,9 +25,11 @@ const CardInput = ( { onAdd } ) => {
             return
         }
 
-        onAdd( { type: creditCard, approveDate } )
+        onAdd( { type: creditCard, approveDate: approveDate } )
         setCreditCard('')
         setApproveDate('')
+        routeChange()
+
     }
   return (
     <form className='cardInput1' onSubmit={onSubmit} >
@@ -37,7 +46,7 @@ const CardInput = ( { onAdd } ) => {
             <input type="text" className="topInput" name="Add Approved Date" placeholder="MM/DD/YYYY" value={approveDate} onChange={(e) => {setApproveDate(e.target.value)}} pattern='^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$' title='Date Must be in the format MM/DD/YYYY' />
         </div>
         <div>
-            <button id='cardInputBtn'> <h2> Add Credit Card </h2> </button>
+        <button id='cardInputBtn'> <h2> Add Credit Card </h2> </button>
         </div>
     </form>
   )

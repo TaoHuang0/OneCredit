@@ -21,9 +21,15 @@ function App() {
   ])
 
   const addCreditCard = (card) => {
-    const id = Math.floor(Math.random() * 10000 + 1)
-    const newCard = {id, ...card}
-    setCreditCards([...creditCards, newCard])
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newCard = {id: id, ...card}
+    setCreditCards([newCard, ...creditCards])
+    console.log(newCard)
+  }
+
+  const deleteCreditCard = (id) => {
+    console.log(id)
+    setCreditCards(creditCards.filter((card) => card.id !== id))
   }
 
   return (
@@ -39,7 +45,7 @@ function App() {
         <Link className='menu' to='/shopping'> <h2> Category Shopping </h2> </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home creditCards={creditCards} />} />
+        <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} />} />
         <Route path="/task" element={<Task />} />
         <Route path="/suggest" element={<Suggest />} />
         <Route path="/shopping" element={<Shopping />} />
