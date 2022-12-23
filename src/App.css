@@ -217,6 +217,7 @@ nav {
 }
 
 .btnTask {
+  cursor: pointer;
   font-size: 25px;
   width: 500px;
   display: flex;

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-const Header = ({title}) => {
+const Header = () => {
     return (
         <header className='headTask'>
-        <h1>{title}</h1>
+        <h1>Credit Card Management Organizor</h1>
         </header>
     )
 }
