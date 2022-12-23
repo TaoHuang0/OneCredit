@@ -1,38 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+@import url("https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple");
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#head {
+  margin: 0, 1em;
+  display: flex;
+  width: auto;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #016FA0;
+  color: white;
+  font-weight: bolder;
+  font-family: "Sofia", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#head h1{
+  flex-grow: 0.8;
+}
+
+#addIcon {
+  justify-self: end;
+  cursor: pointer;
+}
+
+nav {
+  margin: 0;
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: lightgray;
+  font-family: "Rancho", sans-serif;
+}
+
+.menu {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.menu:hover {
+  color: grey;
+  text-shadow: #FC0 1px 0 10px;
+}
+
+#creditCards {
   display: flex;
   flex-direction: column;
+}
+
+#creditCards nav {
+  margin: 1em 3em 0 3em;
+  width: auto;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  color: black;
+  background-color: white;
+}
+
+#creditCards nav #a1 {
+  flex-grow: 0.18;
+}
+
+.cards {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+  border-bottom: solid;
+  border-width: 1px;
+}
+
+#app-del {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 3em;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  background-color: black;
+  text-align: center;
+  height: 3em;
+  width: 50%;
+  font-size: large;
+}
+
+.cardInput1 {
+  margin-top: 3em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin: 0 0 3em 0;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cardInputBtn {
+  height: 50px;
+  width: auto;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.label {
+  font-size: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topInput {
+  height: 2em;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 20px;
 }
