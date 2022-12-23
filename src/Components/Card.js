@@ -15,7 +15,7 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
         }
     }
 
-    let url =''
+    let url = ''
     if(type === 'Discover It') url = 'https://www.uscreditcardguide.com/discover-it-credit-card/'
     if(type === 'BOA 321') url = 'https://www.uscreditcardguide.com/boa-cash-rewards-credit-card/'
 

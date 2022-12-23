@@ -32,7 +32,7 @@ const TaskInput = ({ onAdd }) => {
             </div>
             <div className="reminderTask">
                 <label className="labelTask"> Set Reminder </label>
-                <input id='checkboxTask' type="checkbox" value={reminder} checked={reminder} />
+                <input id='checkboxTask' type="checkbox" value={reminder} onChange={(e) => {setReminder(e.target.value)}} />
             </div>
             <div>
                 <button className="btnTask" style={{ backgroundColor : 'black', color: 'white' }}> Add Task </button>
