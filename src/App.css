@@ -172,3 +172,69 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headTask {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputTask {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.labelTask {
+  align-self: flex-start;
+  font-size: 20px;
+}
+
+.topInputTask {
+  height: 40px;
+  width: 500px;
+  font-size: 20px;
+  border-color: black;
+}
+
+.btnTask {
+  font-size: 25px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.task {
+  width: 500px;
+  text-align: center;
+  background-color: lightgray;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  font-size: 17px;
+}
+
+.deleteTask {
+  float: inline-end;
+}
