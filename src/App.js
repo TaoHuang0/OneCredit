@@ -7,34 +7,41 @@ import Task from "./Pages/Task"
 import Shopping from './Pages/Shopping'
 import CardInput from './Pages/CardInput';
 import { useState } from 'react'
+import { useEffect } from 'react';
 
 function App() {
-  const [creditCards, setCreditCards] = useState([
-    { id: 1,
-      type: 'Discover It',
-      approveDate: '12/12/2022',
-      groceryBenifit: 5,
-      onlineBenifit: 3,
-      travelBenifit: 0
-    },
-    { id: 2,
-      type: 'BOA 321',
-      approveDate: '10/10/2021',
-      groceryBenifit: 0,
-      onlineBenifit: 5,
-      travelBenifit: 7
-    }
-  ])
+  const [creditCards, setCreditCards] = useState([])
 
-  const addCreditCard = (card) => {
-    const id = Math.floor(Math.random() * 10000) + 1
-    const newCard = {id: id, ...card}
-    setCreditCards([newCard, ...creditCards])
-    console.log(newCard)
+  useEffect(() => {
+    const getCards = async() => {
+      const cardsFromServer = await fetchCards()
+      setCreditCards(cardsFromServer)
+    }
+    getCards()
+  }, [])
+
+  const fetchCards = async() => {
+    const res = await fetch('http://localhost:5000/cards')
+    const data = await res.json()
+    return data
   }
 
-  const deleteCreditCard = (id) => {
-    console.log(id)
+  const addCreditCard = async(card) => {
+    const res = await fetch('http://localhost:5000/cards',
+    {method: 'POST', 
+     headers: {
+      'Content-type' : 'application/json'
+     },
+     body: JSON.stringify(card)
+     })
+
+     const data = await res.json()
+
+     setCreditCards([...creditCards, data])
+  }
+
+  const deleteCreditCard = async(id) => {
+    await fetch(`http://localhost:5000/cards/${id}`, {method: `DELETE`,})
     setCreditCards(creditCards.filter((card) => card.id !== id))
   }
 

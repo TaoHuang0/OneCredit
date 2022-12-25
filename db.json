@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "id": 2,
+      "type": "BOA 321",
+      "approveDate": "10/10/2021",
+      "groceryBenifit": 0,
+      "onlineBenifit": 5,
+      "travelBenifit": 7
+    },
+    {
+      "type": "Discover It",
+      "approveDate": "12/25/2022",
+      "groceryBenifit": "9",
+      "onlineBenifit": "8",
+      "travelBenifit": "0",
+      "id": 3
+    }
+  ]
+}
