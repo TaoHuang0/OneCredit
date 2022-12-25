@@ -16,5 +16,19 @@
       "travelBenifit": "0",
       "id": 3
     }
+  ],
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Discover 5% Amazon End",
+      "day": "12/31/2022",
+      "reminder": false
+    },
+    {
+      "text": "Chase cff 5% end",
+      "day": "12/31/2022",
+      "reminder": false,
+      "id": 3
+    }
   ]
 }

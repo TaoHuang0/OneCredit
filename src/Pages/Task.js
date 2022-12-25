@@ -2,32 +2,43 @@ import Header from '../Components/Header'
 import TaskInput from '../Components/TaskInput'
 import Tasks from '../Components/Tasks';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function Task() {
-  const [tasks, setTasks] = useState([
-    { 
-      id: 1,
-      text: 'Vemno Amex Offer Expired',
-      day: '01/15/2023',
-      reminder: true,
-    },
-    { 
-      id: 2,
-      text: 'Discover 5% Amazon End',
-      day: '12/31/2022',
-      reminder: false,
-    },
-  ])
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    const getTasks = async() => {
+      const tasksFromServer = await fetchTasks()
+      setTasks(tasksFromServer)
+    }
+    getTasks()
+  }, [])
+
+  const fetchTasks = async() => {
+    const res = await fetch('http://localhost:5000/tasks')
+    const data = await res.json()
+    return data
+  }
 
   //add task
-  const addTask = (task) => {
-    const id = Math.floor(Math.random() * 10000) + 1
-    const newtask = { id, ...task }
-    setTasks([...tasks, newtask])
+  const addTask = async(task) => {
+    const res = await fetch('http://localhost:5000/tasks',
+    {method: 'POST', 
+     headers: {
+      'Content-type' : 'application/json'
+     },
+     body: JSON.stringify(task)
+     })
+
+     const data = await res.json()
+
+     setTasks([...tasks, data])
   }
 
   //delete task
-  const deleteTask = (id) => {
+  const deleteTask = async(id) => {
+    await fetch(`http://localhost:5000/tasks/${id}`, {method: 'DELETE',})
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
