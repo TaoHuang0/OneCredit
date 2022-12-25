@@ -37,12 +37,11 @@ const Shopping = ( { creditCards } ) => {
         <button className='categoryBtn'> Submit </button>
       </form>
       <div className='categoryCards'>
-        <h2 id='sortH2'> Best Credit Card for {select}: </h2>
+        {select ? <h2 id='sortH2'> Best Credit Card for {select}: </h2> : ''}
         {sortCards.map((card) => (
             <SortCard creditCard={card} />
           ))}
       </div>
-      
     </div>
   )
 }
