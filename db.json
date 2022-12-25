@@ -15,6 +15,102 @@
       "onlineBenifit": "8",
       "travelBenifit": "0",
       "id": 3
+    },
+    {
+      "type": "CHASE FREEDOM UNLIMITED",
+      "approveDate": "12/21/2022",
+      "groceryBenifit": "3",
+      "onlineBenifit": "3",
+      "travelBenifit": "1",
+      "id": 4
+    },
+    {
+      "type": "CHASE FREEDOM FLEX",
+      "approveDate": "10/20/2020",
+      "groceryBenifit": "3",
+      "onlineBenifit": "3",
+      "travelBenifit": "3",
+      "id": 5
+    },
+    {
+      "type": "CHASE SAPPHIRE PREFERRED",
+      "approveDate": "11/28/2021",
+      "groceryBenifit": "1",
+      "onlineBenifit": "1",
+      "travelBenifit": "3",
+      "id": 6
+    },
+    {
+      "type": "SOUTHWEST RAPID REWARDS® PLUS",
+      "approveDate": "12/12/2020",
+      "groceryBenifit": "3",
+      "onlineBenifit": "3",
+      "travelBenifit": "3",
+      "id": 7
+    },
+    {
+      "type": "MARRIOTT BONVOY BOUNDLESS®",
+      "approveDate": "05/13/2020",
+      "groceryBenifit": "2",
+      "onlineBenifit": "1",
+      "travelBenifit": "3",
+      "id": 8
+    },
+    {
+      "type": "UNITED EXPLORER",
+      "approveDate": "10/30/2019",
+      "groceryBenifit": "1",
+      "onlineBenifit": "1",
+      "travelBenifit": "5",
+      "id": 9
+    },
+    {
+      "type": "American Express® Gold Card",
+      "approveDate": "07/17/2018",
+      "groceryBenifit": "3",
+      "onlineBenifit": "1",
+      "travelBenifit": "3",
+      "id": 10
+    },
+    {
+      "type": "Blue Cash Preferred® Card",
+      "approveDate": "01/15/2020",
+      "groceryBenifit": "6",
+      "onlineBenifit": "3",
+      "travelBenifit": "1",
+      "id": 11
+    },
+    {
+      "type": "American Express Platinum Card",
+      "approveDate": "08/12/2020",
+      "groceryBenifit": "5",
+      "onlineBenifit": "5",
+      "travelBenifit": "5",
+      "id": 12
+    },
+    {
+      "type": "Delta SkyMiles® Gold American Express Card",
+      "approveDate": "08/01/2021",
+      "groceryBenifit": "1",
+      "onlineBenifit": "1",
+      "travelBenifit": "3",
+      "id": 13
+    },
+    {
+      "type": "Citi Custom Cash Card",
+      "approveDate": "12/01/2022",
+      "groceryBenifit": "3",
+      "onlineBenifit": "5",
+      "travelBenifit": "1",
+      "id": 14
+    },
+    {
+      "type": "Citi Premier® Credit Card",
+      "approveDate": "03/21/2022",
+      "groceryBenifit": "3",
+      "onlineBenifit": "1",
+      "travelBenifit": "3",
+      "id": 15
     }
   ],
   "tasks": [
@@ -25,10 +121,16 @@
       "reminder": false
     },
     {
-      "text": "Chase cff 5% end",
-      "day": "12/31/2022",
-      "reminder": false,
+      "text": "Amex Vemno Offer",
+      "day": "01/15/2023",
+      "reminder": "false",
       "id": 3
+    },
+    {
+      "text": "Starbucks Link Delta 150 Stars Offer",
+      "day": "12/31/2022",
+      "reminder": "false",
+      "id": 4
     }
   ]
 }

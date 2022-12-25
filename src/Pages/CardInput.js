@@ -60,6 +60,18 @@ const CardInput = ( { onAdd } ) => {
                 <option value="">--Please choose an option--</option>
                 <option value='Discover It'> Disccover It </option>
                 <option value='BOA 321'> BOA 321 </option>
+                <option value='CHASE FREEDOM UNLIMITED'> CHASE FREEDOM UNLIMITED </option>
+                <option value='CHASE FREEDOM FLEX'> CHASE FREEDOM FLEX </option>
+                <option value='CHASE SAPPHIRE PREFERRED'> CHASE SAPPHIRE PREFERRED </option>
+                <option value='SOUTHWEST RAPID REWARDS® PLUS'> SOUTHWEST RAPID REWARDS® PLUS </option>
+                <option value='MARRIOTT BONVOY BOUNDLESS®'> MARRIOTT BONVOY BOUNDLESS® </option>
+                <option value='UNITED EXPLORER'> UNITED EXPLORER </option>
+                <option value='American Express® Gold Card'> American Express® Gold Card </option>
+                <option value='Blue Cash Preferred® Card'> Blue Cash Preferred® Card </option>
+                <option value='American Express Platinum Card'> American Express Platinum Card </option>
+                <option value='Delta SkyMiles® Gold American Express Card'> Delta SkyMiles® Gold American Express Card </option>
+                <option value='Citi Custom Cash Card'> Citi Custom Cash Card </option>
+                <option value='Citi Premier® Credit Card'> Citi Premier® Credit Card </option>
             </select>
         </div>
         <div className="text">
