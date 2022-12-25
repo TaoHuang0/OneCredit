@@ -1,22 +1,29 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Home from "./Pages/Home"
 import Task from "./Pages/Task"
 import Suggest from './Pages/Suggest'
 import Shopping from './Pages/Shopping'
 import CardInput from './Pages/CardInput';
-import Add from './Images/add.png'
 import { useState } from 'react'
 
 function App() {
   const [creditCards, setCreditCards] = useState([
     { id: 1,
       type: 'Discover It',
-      approveDate: '12/12/2022'
+      approveDate: '12/12/2022',
+      groceryBenifit: 5,
+      onlineBenifit: 3,
+      travelBenifit: 0
     },
     { id: 2,
       type: 'BOA 321',
-      approveDate: '10/10/2021'
+      approveDate: '10/10/2021',
+      groceryBenifit: 0,
+      onlineBenifit: 5,
+      travelBenifit: 7
     }
   ])
 
@@ -36,7 +43,7 @@ function App() {
     <Router>
       <div id='head'>
         <h1>Dashboard</h1>
-        <Link to='/cardInput'> <img id='addIcon' src={Add} alt='Add New Credit Card' width={50} height={50} /> </Link>
+        <Link to='/cardInput'> <FontAwesomeIcon icon={faPlus} id='plusIcon' /> </Link>
       </div>
       <nav>
         <Link className='menu' to='/'> <h2> Manage Credit Card </h2> </Link>
@@ -48,7 +55,7 @@ function App() {
         <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} />} />
         <Route path="/task" element={<Task />} />
         <Route path="/suggest" element={<Suggest />} />
-        <Route path="/shopping" element={<Shopping />} />
+        <Route path="/shopping" element={<Shopping creditCards={creditCards} />} />
         <Route path="/cardinput" element={<CardInput onAdd={addCreditCard} />} />
       </Routes>
     </Router>
