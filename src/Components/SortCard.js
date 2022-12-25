@@ -19,9 +19,9 @@ const SortCard = ( { creditCard } ) => {
         <h2> {creditCard.type} </h2>
         <div>
           <label id='sortBodyLabel'><b> At a glance </b></label>
-          <p> Grocery Shopping Benefits: {creditCard.groceryBenifit}% cashback on United purchases</p>
-          <p> Online Shopping Benefits: {creditCard.onlineBenifit}% cashback miles on United purchases</p>
-          <p> Travel Benefits: {creditCard.travelBenifit}% cashback on United purchases</p>
+          <p> Grocery Shopping Benefits: {creditCard.groceryBenifit}% cashback on grocery purchases (Exclude Walmart, Target, and Wholesale Clubs)</p>
+          <p> Online Shopping Benefits: {creditCard.onlineBenifit}% cashback on online shopping purchases</p>
+          <p> Travel Benefits: {creditCard.travelBenifit}% cashback on travel purchases, e.g. flight, rental car, hotel</p>
         </div>
       </div>
     </div>
