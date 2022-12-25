@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Home from "./Pages/Home"
 import Task from "./Pages/Task"
-import Suggest from './Pages/Suggest'
 import Shopping from './Pages/Shopping'
 import CardInput from './Pages/CardInput';
 import { useState } from 'react'
@@ -48,13 +47,11 @@ function App() {
       <nav>
         <Link className='menu' to='/'> <h2> Manage Credit Card </h2> </Link>
         <Link className='menu' to='/task'> <h2> Reminder </h2> </Link>
-        <Link className='menu' to='/suggest'>  <h2> Suggest New Credit Card </h2> </Link>
         <Link className='menu' to='/shopping'> <h2> Category Shopping </h2> </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} />} />
         <Route path="/task" element={<Task />} />
-        <Route path="/suggest" element={<Suggest />} />
         <Route path="/shopping" element={<Shopping creditCards={creditCards} />} />
         <Route path="/cardinput" element={<CardInput onAdd={addCreditCard} />} />
       </Routes>
