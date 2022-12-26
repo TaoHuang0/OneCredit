@@ -23,7 +23,7 @@ body {
   background-color: #016FA0;
   color: white;
   font-weight: bolder;
-  font-family: "Sofia", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #head h1{
@@ -75,7 +75,7 @@ nav {
 }
 
 #creditCards nav #a1 {
-  flex-grow: 0.13;
+  flex-grow: 0.07;
 }
 
 .cards {
@@ -109,7 +109,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 15em;
+  margin-right: 10em;
 }
 
 .icon {
