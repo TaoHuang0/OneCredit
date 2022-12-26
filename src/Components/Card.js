@@ -76,20 +76,20 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
         <div className='image'>
             <div>
             <Link to='/cardInfo'>
-                {type === 'Discover It' ? <img src={Discover} alt='Discover It' width={250} height={150} /> : ''}
-                {type === 'BOA 321' ? <img src={Boa321} alt='BOA 321' width={250} height={150} /> : ''}
-                {type === 'CHASE FREEDOM UNLIMITED' ? <img src={Cfu} alt='CHASE FREEDOM UNLIMITED' width={250} height={150} /> : ''}
-                {type === 'CHASE FREEDOM FLEX' ? <img src={Cff} alt='CHASE FREEDOM FLEX' width={250} height={150} /> : ''}
-                {type === 'CHASE SAPPHIRE PREFERRED' ? <img src={Csp} alt='CHASE SAPPHIRE PREFERRED' width={250} height={150} /> : ''}
-                {type === 'SOUTHWEST RAPID REWARDS® PLUS' ? <img src={Swa} alt='SOUTHWEST RAPID REWARDS® PLUS' width={250} height={150} /> : ''}
-                {type === 'MARRIOTT BONVOY BOUNDLESS®' ? <img src={Mbb} alt='MARRIOTT BONVOY BOUNDLESS®' width={250} height={150} /> : ''}
-                {type === 'UNITED EXPLORER' ? <img src={Ue} alt='UNITED EXPLORER' width={250} height={150} /> : ''}
-                {type === 'American Express® Gold Card' ? <img src={Ag} alt='American Express® Gold Card' width={250} height={150} /> : ''}
-                {type === 'Blue Cash Preferred® Card' ? <img src={Abcp} alt='Blue Cash Preferred® Card' width={250} height={150} /> : ''}
-                {type === 'American Express Platinum Card' ? <img src={Aplat} alt='American Express Platinum Card' width={250} height={150} /> : ''}
-                {type === 'Delta SkyMiles® Gold American Express Card' ? <img src={Adg} alt='Delta SkyMiles® Gold American Express Card' width={250} height={150} /> : ''}
-                {type === 'Citi Custom Cash Card' ? <img src={Ccc} alt='Citi Custom Cash Card' width={250} height={150} /> : ''}
-                {type === 'Citi Premier® Credit Card' ? <img src={Cp} alt='Citi Premier® Credit Card' width={250} height={150} /> : ''}
+                {type === 'Discover It' ? <img className='cardHover' src={Discover} alt='Discover It' width={250} height={150} /> : ''}
+                {type === 'BOA 321' ? <img className='cardHover' src={Boa321} alt='BOA 321' width={250} height={150} /> : ''}
+                {type === 'CHASE FREEDOM UNLIMITED' ? <img className='cardHover' src={Cfu} alt='CHASE FREEDOM UNLIMITED' width={250} height={150} /> : ''}
+                {type === 'CHASE FREEDOM FLEX' ? <img className='cardHover' src={Cff} alt='CHASE FREEDOM FLEX' width={250} height={150} /> : ''}
+                {type === 'CHASE SAPPHIRE PREFERRED' ? <img className='cardHover' src={Csp} alt='CHASE SAPPHIRE PREFERRED' width={250} height={150} /> : ''}
+                {type === 'SOUTHWEST RAPID REWARDS® PLUS' ? <img className='cardHover' src={Swa} alt='SOUTHWEST RAPID REWARDS® PLUS' width={250} height={150} /> : ''}
+                {type === 'MARRIOTT BONVOY BOUNDLESS®' ? <img className='cardHover' src={Mbb} alt='MARRIOTT BONVOY BOUNDLESS®' width={250} height={150} /> : ''}
+                {type === 'UNITED EXPLORER' ? <img className='cardHover' src={Ue} alt='UNITED EXPLORER' width={250} height={150} /> : ''}
+                {type === 'American Express® Gold Card' ? <img className='cardHover' src={Ag} alt='American Express® Gold Card' width={250} height={150} /> : ''}
+                {type === 'Blue Cash Preferred® Card' ? <img className='cardHover' src={Abcp} alt='Blue Cash Preferred® Card' width={250} height={150} /> : ''}
+                {type === 'American Express Platinum Card' ? <img className='cardHover' src={Aplat} alt='American Express Platinum Card' width={250} height={150} /> : ''}
+                {type === 'Delta SkyMiles® Gold American Express Card' ? <img className='cardHover' src={Adg} alt='Delta SkyMiles® Gold American Express Card' width={250} height={150} /> : ''}
+                {type === 'Citi Custom Cash Card' ? <img className='cardHover' src={Ccc} alt='Citi Custom Cash Card' width={250} height={150} /> : ''}
+                {type === 'Citi Premier® Credit Card' ? <img className='cardHover' src={Cp} alt='Citi Premier® Credit Card' width={250} height={150} /> : ''}
             </Link>
             </div>
             <div className='icon'>
