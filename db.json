@@ -97,14 +97,6 @@
       "id": 14
     },
     {
-      "type": "Citi Premier® Credit Card",
-      "approveDate": "12/12/2015",
-      "groceryBenifit": "3",
-      "onlineBenifit": "5",
-      "travelBenifit": "2",
-      "id": 15
-    },
-    {
       "type": "Discover It",
       "approveDate": "01/01/2000",
       "groceryBenifit": "1",
@@ -125,12 +117,6 @@
       "day": "01/15/2023",
       "reminder": "false",
       "id": 3
-    },
-    {
-      "text": "Starbucks Link Delta 150 Stars Offer",
-      "day": "12/31/2022",
-      "reminder": "false",
-      "id": 4
     }
   ]
 }
