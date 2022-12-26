@@ -75,7 +75,7 @@ nav {
 }
 
 #creditCards nav #a1 {
-  flex-grow: 0.28;
+  flex-grow: 0.13;
 }
 
 .cards {
@@ -89,7 +89,7 @@ nav {
 .card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 3em;
   padding-bottom: 1em;
@@ -102,12 +102,14 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 }
 
 .image {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 15em;
 }
 
 .icon {
@@ -354,7 +356,10 @@ nav {
 }
 
 .annualFee h4 {
-  color: blue;
+  border-radius: 25px;
+  padding: 7px;
+  background-color: gray;
+  color: white;
   margin-top: 3em;
 }
 
