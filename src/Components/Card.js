@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import { Link } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 import Phone from '../Images/phone.png'
 import Doc from '../Images/docicon.png'
@@ -74,6 +75,7 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
     <div className='card'>
         <div className='image'>
             <div>
+            <Link to='/cardInfo'>
                 {type === 'Discover It' ? <img src={Discover} alt='Discover It' width={250} height={150} /> : ''}
                 {type === 'BOA 321' ? <img src={Boa321} alt='BOA 321' width={250} height={150} /> : ''}
                 {type === 'CHASE FREEDOM UNLIMITED' ? <img src={Cfu} alt='CHASE FREEDOM UNLIMITED' width={250} height={150} /> : ''}
@@ -88,6 +90,7 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
                 {type === 'Delta SkyMiles® Gold American Express Card' ? <img src={Adg} alt='Delta SkyMiles® Gold American Express Card' width={250} height={150} /> : ''}
                 {type === 'Citi Custom Cash Card' ? <img src={Ccc} alt='Citi Custom Cash Card' width={250} height={150} /> : ''}
                 {type === 'Citi Premier® Credit Card' ? <img src={Cp} alt='Citi Premier® Credit Card' width={250} height={150} /> : ''}
+            </Link>
             </div>
             <div className='icon'>
                 <img src={Phone} alt='Credit Card Company Phone Number' width={30} height={30} onClick={csNumber} />

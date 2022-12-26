@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -5,9 +6,10 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Home from "./Pages/Home"
 import Task from "./Pages/Task"
 import Shopping from './Pages/Shopping'
-import CardInput from './Pages/CardInput';
+import CardInput from './Pages/CardInput'
+import CardInfo from './Pages/CardInfo'
 import { useState } from 'react'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 function App() {
   const [creditCards, setCreditCards] = useState([])
@@ -61,6 +63,7 @@ function App() {
         <Route path="/task" element={<Task />} />
         <Route path="/shopping" element={<Shopping creditCards={creditCards} />} />
         <Route path="/cardinput" element={<CardInput onAdd={addCreditCard} />} />
+        <Route path="/cardinfo" element={<CardInfo />} />
       </Routes>
     </Router>
   );

@@ -357,3 +357,50 @@ nav {
   color: blue;
   margin-top: 3em;
 }
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 1em 1em 1em;
+}
+
+#cardBack {
+  height: 200px;
+  width: 500px;
+}
+
+#PaymentForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3em 0 2em 0;
+}
+
+#cardinfoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.cardinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.cardinfoInput {
+  height: 30px;
+  width: 250px;
+  margin: 0 1.5em 0 1.5em;
+  font-size: 20px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+}
