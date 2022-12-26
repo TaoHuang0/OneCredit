@@ -1,8 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import Card from '../Components/Card'
-import CardInput from './CardInput';
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 
 const Home = ( { creditCards, onDelete } ) => {
   let navigate = useNavigate(); 

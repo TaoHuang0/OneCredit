@@ -345,3 +345,15 @@ nav {
 #sortH2 {
   align-self: flex-start;
 }
+
+.annualFee {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.annualFee h4 {
+  color: blue;
+  margin-top: 3em;
+}

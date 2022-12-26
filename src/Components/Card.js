@@ -36,6 +36,24 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
         }
     }
 
+    const fees = {
+        "Discover It": 0,
+        "BOA 321": 0,
+        "CHASE FREEDOM UNLIMITED": 0,
+        "CHASE FREEDOM FLEX": 0,
+        "CHASE SAPPHIRE PREFERRED": 95 + ", First Year Free",
+        "SOUTHWEST RAPID REWARDS® PLUS": 69,
+        "MARRIOTT BONVOY BOUNDLESS®": 95,
+        "UNITED EXPLORER": 95,
+        "American Express® Gold Card": 250,
+        "Blue Cash Preferred® Card": 95 + ", First Year Free",
+        "American Express Platinum Card": 695,
+        "Delta SkyMiles® Gold American Express Card": 99 + ", First Year Free",
+        "Citi Custom Cash Card": 0,
+        "Citi Premier® Credit Card": 95 + ", First Year Free"
+    }
+    const map = new Map(Object.entries(fees));
+
     let url = ''
     if(type === 'Discover It') url = 'https://www.uscreditcardguide.com/discover-it-credit-card/'
     if(type === 'BOA 321') url = 'https://www.uscreditcardguide.com/boa-cash-rewards-credit-card/'
@@ -78,8 +96,9 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
             <img src={Doc} alt='Credit Card Benifit Description' width={30} height={30} onClick={() => {window.open(url, '_blank', 'noopener,noreferrer')}} />
             </div>
         </div>
-        <div>
+        <div className='annualFee'>
             <h3> {type} </h3>
+            <h4> {map.get(type) === 0 ? 'No Annual Fee' : 'Annual Fee: $' + map.get(type)} </h4>
         </div>
         <div id='app-del'>
             <h3> {approveDate} </h3>
