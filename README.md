@@ -2,7 +2,7 @@
 
 ## Features
 1. Manage your credit cards in one place
-2. Access all your stored card information, e.g. Card number, Card Holder Name, Expiration date, and CVC in the app
+2. Store and access your stored card information in the app, e.g. Card number, Card Holder Name, Expiration date, and CVC
 3. Know your annual fee for all of your credit cards
 4. Convenient access to Customer Service number for each credit card you have
 5. Convenient access to specific US Credit Card Guide for each credit card you have
