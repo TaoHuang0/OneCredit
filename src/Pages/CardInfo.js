@@ -3,6 +3,7 @@ import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { FaTimes } from 'react-icons/fa'
 
 const CardInfo = ({ infoCard }) => {
   const [number, setNumber] = useState('')
@@ -69,6 +70,11 @@ const CardInfo = ({ infoCard }) => {
      setInfo([...info, data])
   }
 
+  const deleteCardinfo = async(id) => {
+    await fetch(`http://localhost:5000/info/${id}`, {method: `DELETE`,})
+    setInfo(info.filter((card) => card.id !== id))
+  }
+
   return (
     <div id="PaymentForm">
         <h2> {infoCard.type} </h2>
@@ -88,6 +94,7 @@ const CardInfo = ({ infoCard }) => {
               placeholder="Card Number"
               onChange={e => setNumber(e.target.value)}
               onFocus={e => setFocus(e.target.name)}
+              value={number}
               pattern='^[0-9]{16}$'
               title='Card Number Must be 16 Digits'
             />
@@ -98,6 +105,7 @@ const CardInfo = ({ infoCard }) => {
               placeholder="Name"
               onChange={e => setName(e.target.value)}
               onFocus={e => setFocus(e.target.name)}
+              value={name}
               pattern='^[A-Z][a-z]+[ ][A-Z][a-z]+$'
               title='Put Card Holder Name Here'
             />
@@ -108,6 +116,7 @@ const CardInfo = ({ infoCard }) => {
               placeholder="MM/YY"
               onChange={e => setExpiry(e.target.value)}
               onFocus={e => setFocus(e.target.name)}
+              value={expiry}
               pattern='^[0-9]{2}/2[0-9]$'
               title='Expire Date Must be In Format MM/YY'
             />
@@ -118,6 +127,7 @@ const CardInfo = ({ infoCard }) => {
               placeholder="CVC"
               onChange={e => setCvc(e.target.value)}
               onFocus={e => setFocus(e.target.name)}
+              value={cvc}
               pattern='^[0-9]{3}[0-9]?$'
               title='CVC Must be In 3 - 4 Digits'
             />
@@ -127,11 +137,17 @@ const CardInfo = ({ infoCard }) => {
           </div>
         </form>
         <div className='infoYes'>
-          <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
-          <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Number: ' + card.number : ''))} </h3>
-          <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Holder Name: ' + card.name : ''))} </h3>
-          <h3> {info.map((card) => (card.id === infoCard.id ? 'Expire Date: ' + card.expiry : ''))} </h3>
-          <h3> {info.map((card) => (card.id === infoCard.id ? 'CVC: ' + card.cvc : ''))} </h3>
+          <div>
+            <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
+            <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Number: ' + card.number : ''))} </h3>
+            <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Holder Name: ' + card.name : ''))} </h3>
+            <h3> {info.map((card) => (card.id === infoCard.id ? 'Expire Date: ' + card.expiry : ''))} </h3>
+            <h3> {info.map((card) => (card.id === infoCard.id ? 'CVC: ' + card.cvc : ''))} </h3>
+          </div>
+            <FaTimes className='deleteCard'
+            style={{ color: 'red', cursor: 'pointer', marginLeft: '2em'}}
+            onClick={ () => deleteCardinfo(infoCard.id) }
+            />
         </div>
     </div>
   )

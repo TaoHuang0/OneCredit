@@ -418,9 +418,11 @@ nav {
 
 .infoYes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 500px;
-  text-align: center;
+  text-align: left;
   background-color: lightgray;
   margin-bottom: 3px;
   border-radius: 3px;
@@ -428,7 +430,7 @@ nav {
   border: solid;
   border-color: black;
   margin-top: 3em;
-  padding: 0 1em 0 1em;
+  padding: 0 0 0 1em;
 }
 
 #infoDes {
