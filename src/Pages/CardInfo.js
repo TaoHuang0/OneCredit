@@ -146,7 +146,7 @@ const CardInfo = ({ infoCard }) => {
         </form> }
         <div className={ checkInfo() ? 'infoYes' : '' }>
           <div>
-            <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
+            <h2 id='infoDes'> {info.map((card) => (card.id === infoCard.id ? 'Your Card Information:' : ''))} </h2>
             <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Number: ' + card.number : ''))} </h3>
             <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Holder Name: ' + card.name : ''))} </h3>
             <h3> {info.map((card) => (card.id === infoCard.id ? 'Expire Date: ' + card.expiry : ''))} </h3>

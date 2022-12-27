@@ -425,7 +425,7 @@ nav {
   text-align: left;
   background-color: lightgray;
   margin-bottom: 3px;
-  border-radius: 3px;
+  border-radius: 25px;
   font-size: 15px;
   border: solid;
   border-color: black;
@@ -434,6 +434,8 @@ nav {
 }
 
 #infoDes {
+  text-transform: uppercase;
   align-self: flex-start;
   color: #1C315E;
+  font-weight: bold;
 }
