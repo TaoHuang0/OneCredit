@@ -121,20 +121,12 @@
   ],
   "info": [
     {
-      "id": 4,
-      "type": "CHASE FREEDOM UNLIMITED",
-      "number": "8123412941237483",
-      "name": "Tao Huang",
-      "expiry": "04/25",
-      "cvc": "725"
-    },
-    {
-      "id": 5,
-      "type": "CHASE FREEDOM FLEX",
-      "number": "4872812847291485",
-      "name": "Tao Huang",
-      "expiry": "07/25",
-      "cvc": "736"
+      "id": 3,
+      "type": "Discover It",
+      "number": "6011234721284951",
+      "name": "John Doe",
+      "expiry": "05/25",
+      "cvc": "846"
     }
   ]
 }

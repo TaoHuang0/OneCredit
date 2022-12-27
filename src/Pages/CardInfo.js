@@ -75,6 +75,12 @@ const CardInfo = ({ infoCard }) => {
     setInfo(info.filter((card) => card.id !== id))
   }
 
+  const checkInfo = () => {
+    let cInfo = false;
+    info.map((card) => (card.id === infoCard.id ?  cInfo = true : ''))
+    return cInfo
+  }
+
   return (
     <div id="PaymentForm">
         <h2> {infoCard.type} </h2>
@@ -136,7 +142,7 @@ const CardInfo = ({ infoCard }) => {
             <button id='cardInputBtn'> <h2> Add My Card Information </h2> </button>
           </div>
         </form>
-        <div className='infoYes'>
+        <div className={ checkInfo() ? 'infoYes' : '' }>
           <div>
             <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
             <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Number: ' + card.number : ''))} </h3>
@@ -144,10 +150,11 @@ const CardInfo = ({ infoCard }) => {
             <h3> {info.map((card) => (card.id === infoCard.id ? 'Expire Date: ' + card.expiry : ''))} </h3>
             <h3> {info.map((card) => (card.id === infoCard.id ? 'CVC: ' + card.cvc : ''))} </h3>
           </div>
+          { checkInfo() ?
             <FaTimes className='deleteCard'
             style={{ color: 'red', cursor: 'pointer', marginLeft: '2em'}}
             onClick={ () => deleteCardinfo(infoCard.id) }
-            />
+            /> : '' }
         </div>
     </div>
   )
