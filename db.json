@@ -129,20 +129,20 @@
       "cvc": "374"
     },
     {
-      "id": 4,
-      "type": "CHASE FREEDOM UNLIMITED",
-      "number": "5628382918372910",
-      "name": "John Doe",
-      "expiry": "05/27",
-      "cvc": "812"
-    },
-    {
       "id": 3,
       "type": "Discover It",
       "number": "6011274837293472",
       "name": "John Doe",
       "expiry": "05/27",
       "cvc": "857"
+    },
+    {
+      "id": 6,
+      "type": "CHASE SAPPHIRE PREFERRED",
+      "number": "4927328164827182",
+      "name": "John Doe",
+      "expiry": "03/27",
+      "cvc": "735"
     }
   ]
 }
