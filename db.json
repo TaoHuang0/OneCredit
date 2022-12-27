@@ -121,12 +121,28 @@
   ],
   "info": [
     {
+      "id": 5,
+      "type": "CHASE FREEDOM FLEX",
+      "number": "5912374789123284",
+      "name": "John Doe",
+      "expiry": "07/24",
+      "cvc": "374"
+    },
+    {
+      "id": 4,
+      "type": "CHASE FREEDOM UNLIMITED",
+      "number": "5628382918372910",
+      "name": "John Doe",
+      "expiry": "05/27",
+      "cvc": "812"
+    },
+    {
       "id": 3,
       "type": "Discover It",
-      "number": "6011234721284951",
+      "number": "6011274837293472",
       "name": "John Doe",
-      "expiry": "05/25",
-      "cvc": "846"
+      "expiry": "05/27",
+      "cvc": "857"
     }
   ]
 }
