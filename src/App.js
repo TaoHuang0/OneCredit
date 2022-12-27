@@ -13,6 +13,7 @@ import { useEffect } from 'react'
 
 function App() {
   const [creditCards, setCreditCards] = useState([])
+  const [infoCard, setInfoCard] = useState('')
 
   useEffect(() => {
     const getCards = async() => {
@@ -47,6 +48,10 @@ function App() {
     setCreditCards(creditCards.filter((card) => card.id !== id))
   }
 
+  const onClickinfo = (card) => {
+    setInfoCard(card)
+  }
+
   return (
     <Router>
       <div id='head'>
@@ -59,11 +64,11 @@ function App() {
         <Link className='menu' to='/shopping'> <h2> Category Shopping </h2> </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} />} />
+        <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} onClickinfo={onClickinfo} />} />
         <Route path="/task" element={<Task />} />
         <Route path="/shopping" element={<Shopping creditCards={creditCards} />} />
         <Route path="/cardinput" element={<CardInput onAdd={addCreditCard} />} />
-        <Route path="/cardinfo" element={<CardInfo />} />
+        <Route path="/cardinfo" element={<CardInfo infoCard={infoCard} />} />
       </Routes>
     </Router>
   );

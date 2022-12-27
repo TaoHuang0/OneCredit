@@ -20,7 +20,7 @@ import Ccc from '../Images/citicc.png'
 import Cp from '../Images/citip.png'
 
 
-const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
+const Card = ( { creditCard, type, approveDate, onDelete, onClickinfo } ) => {
     const csNumber = () => {
         if(type === 'Discover It'){
             alert('Call 1-800-347-2683')
@@ -75,7 +75,7 @@ const Card = ( { creditCard, type, approveDate, onDelete  } ) => {
     <div className='card'>
         <div className='image'>
             <div>
-            <Link to='/cardInfo'>
+            <Link to='/cardInfo' onClick={() => onClickinfo(creditCard)}>
                 {type === 'Discover It' ? <img className='cardHover' src={Discover} alt='Discover It' width={250} height={150} /> : ''}
                 {type === 'BOA 321' ? <img className='cardHover' src={Boa321} alt='BOA 321' width={250} height={150} /> : ''}
                 {type === 'CHASE FREEDOM UNLIMITED' ? <img className='cardHover' src={Cfu} alt='CHASE FREEDOM UNLIMITED' width={250} height={150} /> : ''}

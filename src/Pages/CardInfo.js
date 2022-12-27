@@ -2,13 +2,15 @@ import React from 'react';
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css'
 import { useState } from 'react';
+import { useEffect } from 'react';
 
-const CardInfo = () => {
+const CardInfo = ({ infoCard }) => {
   const [number, setNumber] = useState('')
   const [name, setName] = useState('')
   const [expiry, setExpiry] = useState('')
   const [cvc, setCvc] = useState('')
   const [focus, setFocus] = useState('')
+  const [info, setInfo] = useState([])
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -32,14 +34,44 @@ const CardInfo = () => {
         alert('No CVC Input')
         return
     }
+    addInfo( { id: infoCard.id, type: infoCard.type, number: number, name: name, expiry: expiry, cvc: cvc } )
     setNumber('')
     setName('')
     setExpiry('')
     setCvc('')
   }
 
+  useEffect(() => {
+    const getInfo = async() => {
+      const infoFromServer = await fetchInfo()
+      setInfo(infoFromServer)
+    }
+    getInfo()
+  }, [])
+
+  const fetchInfo = async() => {
+    const res = await fetch('http://localhost:5000/info')
+    const data = await res.json()
+    return data
+  }
+
+  const addInfo = async(card) => {
+    const res = await fetch('http://localhost:5000/info',
+    {method: 'POST', 
+     headers: {
+      'Content-type' : 'application/json'
+     },
+     body: JSON.stringify(card)
+     })
+
+     const data = await res.json()
+
+     setInfo([...info, data])
+  }
+
   return (
     <div id="PaymentForm">
+        <h2> {infoCard.type} </h2>
         <Cards
           cvc={cvc}
           expiry={expiry}
@@ -94,6 +126,9 @@ const CardInfo = () => {
             <button id='cardInputBtn'> <h2> Add My Card Information </h2> </button>
           </div>
         </form>
+        <div>
+          <h3> Card Number:  </h3>
+        </div>
     </div>
   )
 }
