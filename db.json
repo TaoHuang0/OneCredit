@@ -127,6 +127,14 @@
       "name": "Ni Hao",
       "expiry": "03/24",
       "cvc": "123"
+    },
+    {
+      "id": 4,
+      "type": "CHASE FREEDOM UNLIMITED",
+      "number": "8123412941237483",
+      "name": "Tao Huang",
+      "expiry": "04/25",
+      "cvc": "725"
     }
   ]
 }

@@ -126,8 +126,12 @@ const CardInfo = ({ infoCard }) => {
             <button id='cardInputBtn'> <h2> Add My Card Information </h2> </button>
           </div>
         </form>
-        <div>
-          <h3> Card Number:  </h3>
+        <div className='infoYes'>
+          <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
+          <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Number: ' + card.number : ''))} </h3>
+          <h3> {info.map((card) => (card.id === infoCard.id ? 'Card Holder Name: ' + card.name : ''))} </h3>
+          <h3> {info.map((card) => (card.id === infoCard.id ? 'Expire Date: ' + card.expiry : ''))} </h3>
+          <h3> {info.map((card) => (card.id === infoCard.id ? 'CVC: ' + card.cvc : ''))} </h3>
         </div>
     </div>
   )
