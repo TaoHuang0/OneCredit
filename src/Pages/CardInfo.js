@@ -84,13 +84,15 @@ const CardInfo = ({ infoCard }) => {
   return (
     <div id="PaymentForm">
         <h2> {infoCard.type} </h2>
+        { checkInfo() ? '' :
         <Cards
           cvc={cvc}
           expiry={expiry}
           focused={focus}
           name={name}
           number={number}
-        />
+        /> }
+        { checkInfo() ? '' : 
         <form id='cardinfoForm' onSubmit={onSubmit}>
           <div className='cardinfo'>
             <input
@@ -141,7 +143,7 @@ const CardInfo = ({ infoCard }) => {
           <div>
             <button id='cardInputBtn'> <h2> Add My Card Information </h2> </button>
           </div>
-        </form>
+        </form> }
         <div className={ checkInfo() ? 'infoYes' : '' }>
           <div>
             <h2 id='infoDes'><b> {info.map((card) => (card.id === infoCard.id ? 'Your Stored Card Information:' : ''))} </b></h2>
