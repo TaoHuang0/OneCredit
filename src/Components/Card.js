@@ -100,7 +100,7 @@ const Card = ( { creditCard, type, approveDate, onDelete, onClickinfo } ) => {
             </div>
         </div>
         <div className='annualFee'>
-            <h3> {type} </h3>
+            <h3 className='cardName'> {type} </h3>
             <h4> {map.get(type) === 0 ? 'No Annual Fee' : 'Annual Fee: $' + map.get(type)} </h4>
 
         </div>

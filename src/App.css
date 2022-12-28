@@ -162,6 +162,7 @@ nav {
 .label {
   align-self: flex-start;
   font-size: 35px;
+  font-weight: 1000;
 }
 
 .topInput {
@@ -440,6 +441,6 @@ nav {
   font-weight: bold;
 }
 
-#shoppingLabel {
+.cardName {
   font-weight: 1000;
 }
