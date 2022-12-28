@@ -5,6 +5,7 @@ const Shopping = ( { creditCards } ) => {
   const unsortCards = [...creditCards]
   const [select, setSelect] = useState('')
   const [sortCards, setSortCards] = useState([])
+  const [label, setLabel] = useState('')
 
   const sortCreditCards = (e) => {
     e.preventDefault()
@@ -22,6 +23,7 @@ const Shopping = ( { creditCards } ) => {
       unsortCards.sort(function(a, b){ return b.travelBenifit - a.travelBenifit })
     }
     setSortCards([unsortCards[0]])
+    setLabel(select)
   }
 
   return (
@@ -37,9 +39,11 @@ const Shopping = ( { creditCards } ) => {
         <button className='categoryBtn'> Submit </button>
       </form>
       <div className='categoryCards'>
-        {select ? <h2 id='sortH2'> Best Credit Card for {select}: </h2> : ''}
         {sortCards.map((card) => (
+          <div>
+            <h2 id='sortH2'> Best Credit Card for {label}: </h2>
             <SortCard creditCard={card} />
+          </div>
           ))}
       </div>
     </div>
