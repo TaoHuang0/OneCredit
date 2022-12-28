@@ -29,7 +29,7 @@ const Shopping = ( { creditCards } ) => {
   return (
     <div className='shopping'>
       <form className='categoryForm' onSubmit={ sortCreditCards }>
-        <label> Select Category Here: </label>
+        <label id='shoppingLabel'> Select Category Here: </label>
         <select type="text" className="chooseCategory" name="Choose Category" value={select} onChange={(e) => {setSelect(e.target.value)}}>
                 <option value="">--Please choose an option--</option>
                 <option value='grocery Benifit'> Grocery Shopping </option>
