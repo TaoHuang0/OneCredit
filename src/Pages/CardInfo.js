@@ -1,8 +1,7 @@
 import React from 'react';
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import { FaTimes } from 'react-icons/fa'
 import Discover from '../Images/Discover.png'
 import Boa321 from '../Images/boa321.png'
@@ -18,8 +17,22 @@ import Aplat from '../Images/amexPlat.jpeg'
 import Adg from '../Images/amexDeltaGold.jpeg'
 import Ccc from '../Images/citicc.png'
 import Cp from '../Images/citip.png'
+import CLOUDS from 'vanta/dist/vanta.clouds.min'
 
 const CardInfo = ({ infoCard }) => {
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(CLOUDS({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+
   const [number, setNumber] = useState('')
   const [name, setName] = useState('')
   const [expiry, setExpiry] = useState('')
@@ -95,7 +108,7 @@ const CardInfo = ({ infoCard }) => {
     return cInfo
   }
 
-  return (
+  return <div ref={myRef} id='vanta'>
     <div id="PaymentForm">
         <h2> {infoCard.type} </h2>
         {checkInfo() ? '' :
@@ -191,7 +204,7 @@ const CardInfo = ({ infoCard }) => {
             /> : '' }
         </div>
     </div>
-  )
+  </div>
 }
 
 export default CardInfo
