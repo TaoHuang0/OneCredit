@@ -59,9 +59,9 @@ function App() {
         <Link to='/cardInput'> <FontAwesomeIcon icon={faPlus} id='plusIcon' /> </Link>
       </div>
       <nav>
-        <Link className='menu' to='/'> <h2> Manage Credit Card </h2> </Link>
-        <Link className='menu' to='/task'> <h2> Reminder </h2> </Link>
-        <Link className='menu' to='/shopping'> <h2> Category Shopping </h2> </Link>
+        <Link className='menu' id='menu1' to='/'> <h2> Manage Credit Card </h2> </Link>
+        <Link className='menu'  id='menu2' to='/task'> <h2> Reminder </h2> </Link>
+        <Link className='menu' id='menu3'  to='/shopping'> <h2> Category Shopping </h2> </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home creditCards={creditCards} onDelete={deleteCreditCard} onClickinfo={onClickinfo} />} />
