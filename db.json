@@ -33,14 +33,6 @@
       "id": 6
     },
     {
-      "type": "UNITED EXPLORER",
-      "approveDate": "10/30/2019",
-      "groceryBenifit": "1",
-      "onlineBenifit": "1",
-      "travelBenifit": "5",
-      "id": 9
-    },
-    {
       "type": "Blue Cash Preferred® Card",
       "approveDate": "01/15/2020",
       "groceryBenifit": "6",
@@ -81,20 +73,26 @@
       "cvc": "374"
     },
     {
-      "id": 3,
-      "type": "Discover It",
-      "number": "6011274837293472",
-      "name": "John Doe",
-      "expiry": "05/27",
-      "cvc": "857"
-    },
-    {
       "id": 6,
       "type": "CHASE SAPPHIRE PREFERRED",
       "number": "4927328164827182",
       "name": "John Doe",
       "expiry": "03/27",
       "cvc": "735"
+    },
+    {
+      "number": "347283929302834",
+      "name": "John Doe",
+      "expiry": "03/26",
+      "cvc": "4730",
+      "id": 7
+    },
+    {
+      "number": "6512342134829193",
+      "name": "John Doe",
+      "expiry": "03/27",
+      "cvc": "238",
+      "id": 8
     }
   ]
 }

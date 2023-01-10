@@ -116,7 +116,7 @@ const CardInfo = ({ infoCard }) => {
               onChange={e => setNumber(e.target.value)}
               onFocus={e => setFocus(e.target.name)}
               value={number}
-              pattern='^[0-9]{16}$'
+              pattern='^((37|34)[0-9]{13})|(4[0-9]{13}([0-9]{3}?))|(5[0-9]{15})|(65[0-9]{14})|(3[0-9]{13})$'
               title='Card Number Must be 16 Digits'
             />
             <input
