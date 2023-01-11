@@ -15,5 +15,3 @@ Whether you're new to credit cards or you already have 20+ credit cards to your 
 6. Category Shopping: Implemented algorithm to select the best credit card to use on a particular website to maximize the cash back for a purchase
 7. A reminder system to help you manage your cards, e.g. Set reminder for payment due date
 8. Support 5 major banks and over 20 popular credit cards...Continue Supporting New Cards
-
-Hosting In Process: https://onecredit-1f420.web.app
