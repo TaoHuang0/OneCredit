@@ -40,7 +40,7 @@ const Shopping = ( { creditCards } ) => {
       </form>
       <div className='categoryCards'>
         {sortCards.map((card) => (
-          creditCards[0] == undefined ? '' :
+          creditCards[0] === undefined ? '' :
             <div>
               <h2 id='sortH2'> Best Credit Card for {label}: </h2>
               <SortCard creditCard={card} />
