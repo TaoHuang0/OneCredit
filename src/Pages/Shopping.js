@@ -40,10 +40,11 @@ const Shopping = ( { creditCards } ) => {
       </form>
       <div className='categoryCards'>
         {sortCards.map((card) => (
-          <div>
-            <h2 id='sortH2'> Best Credit Card for {label}: </h2>
-            <SortCard creditCard={card} />
-          </div>
+          creditCards[0] == undefined ? '' :
+            <div>
+              <h2 id='sortH2'> Best Credit Card for {label}: </h2>
+              <SortCard creditCard={card} />
+            </div>
           ))}
       </div>
     </div>
