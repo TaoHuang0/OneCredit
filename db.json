@@ -65,14 +65,6 @@
   ],
   "info": [
     {
-      "id": 5,
-      "type": "CHASE FREEDOM FLEX",
-      "number": "5912374789123284",
-      "name": "John Doe",
-      "expiry": "07/24",
-      "cvc": "374"
-    },
-    {
       "id": 6,
       "type": "CHASE SAPPHIRE PREFERRED",
       "number": "4927328164827182",
@@ -93,6 +85,14 @@
       "expiry": "03/27",
       "cvc": "238",
       "id": 8
+    },
+    {
+      "id": 4,
+      "type": "CHASE FREEDOM UNLIMITED",
+      "number": "341273612737747",
+      "name": "John Doe",
+      "expiry": "03/28",
+      "cvc": "123"
     }
   ]
 }
